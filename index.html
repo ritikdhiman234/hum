@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to right, blue, black);
+            line-height: 1.6;
+        }
+        header{
+            padding: 1rem 2rem;
+            box-shadow: 1px 3px 4px black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header nav{
+            display: flex;
+            gap: 2rem;
+        }
+        header nav a{
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            position: relative;
+        }
+        header nav a::before{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background-color: blue;
+            bottom: 0;
+            opacity: 0;
+            transition: all 0.8s;
+        }
+        header nav a:hover::before{
+            width: 100%;
+            opacity: 1;
+        }
+        .hero{
+            padding: 4rem 2rem;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            gap: 2rem;
+        }
+        .grid .div1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid .div1 h1{
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        .grid .div1 p{
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .grid .div1 button{
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            box-shadow: 1px 3px 6px black;
+        }
+        .grid .div2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid .div2 img{
+            width: 80%;
+            height: 80%;
+        }
+        .hero1{
+            padding: 4rem 2rem;
+        }
+        .hero1 .grid{
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 2rem;
+
+        }
+        .hero1 .grid .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1px 3px 6px black;
+        }
+        .hero1 .grid .card img{
+            width:60%;
+            height: 60%;
+        }
+        .hero1 .grid .card h1{
+            font-size: 1.1rem;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 0.5rem;
+        }
+         .hero1 .grid .card p{
+            color: white;
+            text-align: justify;
+            padding: 1rem;
+         }
+         footer{
+            padding: 2rem 2rem;
+            text-align: center;
+            box-shadow: 1px 2px 5px black;
+            color: white;
+         }
+
+        @media(max-width:768px){
+            header nav{
+                display: none;
+            }
+            header .logo h1{
+                font-size: 1.5rem;
+                color: white;
+                text-shadow: 1px 3px 5px white;
+            }
+    
+            .grid{
+                grid-template-columns: repeat(1 , 1fr);
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .grid .div1 h1{
+                font-size: 2rem;
+            }
+            .grid .div1 p{
+                font-size: 0.8rem;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: justify;
+            }
+            .grid .div1 button{
+                padding: 0.8rem 1.5rem;
+            }
+            .hero1 .grid{
+                grid-template-columns: repeat(1 , 1fr);
+            }
+            footer h1{
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Flowers</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Flowers</a>
+            <a href="#">Quality</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="grid">
+            <div class="div1">
+                <h1>Beautiful Flowers</h1>
+                <p>Hamre Pass Sabse Bdhiya Quality Flowers Hai.</p>
+                <button>Show Flowers</button>
+            </div>
+            <div class="div2">
+                <img src="Career (2).png" alt="">
+
+            </div>
+        </div>
+    </section>
+    <section class="hero1">
+        <div class="grid">
+            <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+              <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+              <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+              <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+              <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+              <div class="card">
+                <img src="Career (2).png" alt="">
+                <h1>Card 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur assumenda sint modi maxime corporis ducimus, sit optio a nulla recusandae?</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h1>Made By Ritik Dhiman</h1>
+        <p>@ 2026</p>
+    </footer>
+</body>
+
+</html>
